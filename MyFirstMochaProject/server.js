@@ -6,18 +6,18 @@ var express = require('express');
 var config = require('./config.json');
 var app = express();
 
+// De port zetten via config.json bestand
+app.set('PORT', config.webPort);
+
+// Hier wordt de port van de config.json gebruikt
+var port = process.env.PORT || app.get('PORT');
+
 server.all('*', function(request, response, next) {
     console.log(request.method + " " + request.url);
     next();
 })
 
 server.use('/api/v1', require('./routes/routes_api_v1'));
-
-// De port zetten via config.json bestand
-app.set('PORT', config.webPort);
-
-// Hier wordt de port van de config.json gebruikt
-var port = process.env.PORT || app.get('PORT');
 
 app.get('/', function(request, response) {
     response.send('Hello Avans!');
