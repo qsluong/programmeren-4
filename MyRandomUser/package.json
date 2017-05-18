@@ -1,0 +1,14 @@
+{
+  "name": "myrandomuser",
+  "version": "1.0.0",
+  "description": "Opdracht 1.2",
+  "main": "myrandomuser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quocsy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
