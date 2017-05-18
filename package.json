@@ -4,6 +4,7 @@
   "description": "Werkmap voor alle githubprojecten",
   "main": "./MyRandomUser/myrandomuser.js",
   "scripts": {
+    "start": "node ./MyRandomUser/myrandomuser.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
