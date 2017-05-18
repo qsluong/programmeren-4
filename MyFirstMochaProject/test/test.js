@@ -16,3 +16,39 @@ describe('API Test', function() {
             });
     });
 });
+
+describe('Test', function () {
+    it('Test GET /api/v2/info', function(done) {
+        chai.request(server)
+            .get('/api/v2/info')
+            .end(function(err, res) {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                done();
+            });
+    });
+});
+
+describe('Test', function () {
+    it('Test GET /api/v2/recipes/:nummer', function(done) {
+        chai.request(server)
+            .get('/api/v2/recipes/:nummer')
+            .end(function(err, res) {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                done();
+            });
+    });
+});
+
+describe('Test', function () {
+    it('Test GET /api/v2/recipes/?category', function(done) {
+        chai.request(server)
+            .get('/api/v2/recipes/:category')
+            .end(function(err, res) {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                done();
+            });
+    });
+});
