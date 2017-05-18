@@ -28,7 +28,8 @@ app.get('/about', function(request, response) {
 })
 
 // JSON formaat ophalen met request
-app.get('/json', function(request, response) { response.json({
+app.get('/json', function(request, response) {
+    response.json({
     'some_name': 'Value', 'an_array_of_objects': [
         {
             'another_name': 'Another value', 'a_further_name': "A further value"
