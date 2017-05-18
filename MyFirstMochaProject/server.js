@@ -6,6 +6,13 @@ var express = require('express');
 var config = require('./config.json');
 var app = express();
 
+app.all('*', function(request, response, next) {
+    console.log(request.method + " " + request.url);
+    next();
+})
+
+app.use('/api/v1', require('./routes/routes_api_v1'));
+
 // De port zetten via config.json bestand
 app.set('PORT', config.webPort);
 
