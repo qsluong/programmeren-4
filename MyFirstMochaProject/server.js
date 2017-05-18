@@ -4,6 +4,8 @@
 
 var express = require('express');
 var config = require('./config.json');
+
+// App creeëren
 var app = express();
 
 app.all('*', function(request, response, next) {
@@ -11,9 +13,11 @@ app.all('*', function(request, response, next) {
     next();
 })
 
+// Routing API versions
 app.use('/api/v1', require('./routes/routes_api_v1'));
+app.use('/api/v2', require('./routes/routes_api_v2'));
 
-// De port zetten via config.json bestand
+// De port zetten via config.json bestand. Server start
 app.set('PORT', config.webPort);
 
 // Hier wordt de port van de config.json gebruikt
@@ -30,17 +34,23 @@ app.get('/about', function(request, response) {
 // JSON formaat ophalen met request
 app.get('/json', function(request, response) {
     response.json({
-    'some_name': 'Value', 'an_array_of_objects': [
+        'some_name': 'Value', 'an_array_of_objects': [
         {
-            'another_name': 'Another value', 'a_further_name': "A further value"
+            'another_name': 'Another value',
+            'a_further_name': "A further value"
         },
-        {'yet_another_name': 'Yet another value'} ],
-    'some_boolean': true, 'some_integer': 42, 'array_of_ints': [
+        {
+            'yet_another_name': 'Yet another value'
+        }],
+        'some_boolean': true,
+        'some_integer': 42,
+        'array_of_ints': [
         2, 3, 5, 7, 11, 13
-    ],
-    'array_of_strings': [
+        ],
+        'array_of_strings': [
         "twee", "drie", "vijf", "zeven"
-    ] })
+        ]}
+    )
 })
 
 // Opdracht 1.2e
