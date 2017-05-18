@@ -12,13 +12,6 @@ app.set('PORT', config.webPort);
 // Hier wordt de port van de config.json gebruikt
 var port = process.env.PORT || app.get('PORT');
 
-server.all('*', function(request, response, next) {
-    console.log(request.method + " " + request.url);
-    next();
-})
-
-server.use('/api/v1', require('./routes/routes_api_v1'));
-
 app.get('/', function(request, response) {
     response.send('Hello Avans!');
 })
