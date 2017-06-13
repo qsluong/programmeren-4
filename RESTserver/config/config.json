@@ -1,6 +1,9 @@
 {
-  "webPort"     :   "3000",
-  "dbHost"      :   "localhost",
-  "dbUser"      :   "root",
-  "dbDatabase"  :   "world"
+  "webPort"           :   "3000",
+  "dbHost"            :   "localhost",
+  "dbUser"            :   "root",
+  "dbPassword"        :   "supersecret",
+  "dbWorldDatabase"   :   "world",
+  "dbUserDatabase"    :   "userdb",
+  "secretkey"         :   "RESTServerSuperSecretKey-123454321AbCd-"
 }

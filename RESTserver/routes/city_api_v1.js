@@ -14,7 +14,7 @@ router.use(bodyParser.json());
 router.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 router.get('/cities', function(request, response) {
-    var query = 'SELECT * FROM city';
+    var query = 'SELECT * FROM `city`';
 
     console.log("De query is " + query);
 
