@@ -17,10 +17,10 @@ app.all('*', function(request, response, next) {
 app.use('/api/v1', require('./routes/routes_api_v1'));
 app.use('/api/v2', require('./routes/routes_api_v2'));
 
-// De port zetten via config.json bestand. Server start
+// De port zetten via config.json.json bestand. Server start
 app.set('PORT', config.webPort);
 
-// Hier wordt de port van de config.json gebruikt
+// Hier wordt de port van de config.json.json gebruikt
 var port = process.env.PORT || app.get('PORT');
 
 app.get('/', function(request, response) {
