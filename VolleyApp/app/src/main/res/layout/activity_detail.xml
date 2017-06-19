@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/CityNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/EditCityBtn"
+        android:layout_alignStart="@+id/EditCityBtn"/>
+
+    <TextView
+        android:id="@+id/CityCountryCodeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CityNameTv"
+        android:layout_alignStart="@+id/CityNameTv"
+        android:layout_below="@+id/CityNameTv"
+        android:layout_marginTop="30dp"
+        android:text="Country code"/>
+
+    <TextView
+        android:id="@+id/CityDistrictTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CityCountryCodeTv"
+        android:layout_alignStart="@+id/CityCountryCodeTv"
+        android:layout_below="@+id/CityCountryCodeTv"
+        android:layout_marginTop="30dp"
+        android:text="District"/>
+
+    <TextView
+        android:id="@+id/CityPopulationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CityDistrictTv"
+        android:layout_alignStart="@+id/CityDistrictTv"
+        android:layout_below="@+id/CityDistrictTv"
+        android:layout_marginTop="30dp"
+        android:text="12000000"/>
+
+    <Button
+        android:id="@+id/EditCityBtn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Edit City"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/AddCityBtn"
+        android:layout_toStartOf="@+id/AddCityBtn"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:id="@+id/AddCityBtn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/DeleteCityBtn"
+        android:layout_alignBottom="@+id/DeleteCityBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Add City"/>
+
+    <Button
+        android:id="@+id/DeleteCityBtn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Delete City"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignTop="@+id/EditCityBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

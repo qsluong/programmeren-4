@@ -11,7 +11,7 @@ var bodyParser 	= require('body-parser');
 var app = express();
 
 app.set('PORT', config.webPort);
-app.set('SECRET_KEY', config.secretkey);
+// app.set('SECRET_KEY', config.secretkey);
 
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
@@ -19,10 +19,11 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 // Routing API versions
-app.use('/api/v1/', require('./routes/register_api_v1'));
-app.use('/api/v1/', require('./routes/login_api_v1'));
+// app.use('/api/v1/', require('./routes/register_api_v1'));
+// app.use('/api/v1/', require('./routes/login_api_v1'));
 app.use('/api/v1/', require('./routes/city_api_v1'));
 app.use('/api/v1/', require('./routes/country_api_v1'));
+
 
 var port = process.env.PORT || app.get('PORT');
 

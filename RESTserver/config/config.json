@@ -4,6 +4,5 @@
   "dbUser"            :   "root",
   "dbPassword"        :   "supersecret",
   "dbWorldDatabase"   :   "world",
-  "dbUserDatabase"    :   "userdb",
-  "secretkey"         :   "RESTServerSuperSecretKey-123454321AbCd-"
+  "dbUserDatabase"    :   "userdb"
 }
